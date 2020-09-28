@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "xlocale": "cpp",
+        "xutility": "cpp",
+        "string": "cpp",
+        "ostream": "cpp",
+        "vector": "cpp",
+        "deque": "cpp",
+        "utility": "cpp",
+        "*.tcc": "cpp",
+        "set": "cpp",
+        "random": "cpp",
+        "map": "cpp"
+    }
+}
