@@ -9,6 +9,7 @@
 - 最大値: max = *max_element( a.begin(), a.end() );
 - ソートしたあと前後で重複があるものは unique(a.begin(), a.end()) で重複が取り除かれる
 - a.back()でベクトルaの最後の要素がとってこれる
+- int型なら10^5くらいまでの長さの配列は作れる
 
 ### touple
 - a,b,cの要素の組を作りたいときはtie(a, b, c)で作成可能。
