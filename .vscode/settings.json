@@ -12,6 +12,7 @@
         "*.tcc": "cpp",
         "set": "cpp",
         "random": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "memory": "cpp"
     }
 }
