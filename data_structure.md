@@ -6,7 +6,7 @@
 - 昇順ソートはsort(a.begin(),a.end())で可能、降順は(a.rbigin(),a.rend())で可能
 - 要素数はa.size()で可能
 - vectorのコピーは要素ごとにおこなわずvector<int> b = aのようにする。 
-- 最大値: max = *max_element( a.begin(), a.end() );
+- 最大値: max = *max_element( a.begin(), a.end() ); もしくは for(auto e:v) mx = max(mx, e)
 - ソートしたあと前後で重複があるものは unique(a.begin(), a.end()) で重複が取り除かれる
 - a.back()でベクトルaの最後の要素がとってこれる
 - int型なら10^6くらいまでの長さの配列は作れる
@@ -26,16 +26,25 @@
 
 ### map
 - 辞書、連想リスト（キー、値）
-- 内部ではソートされてる
+- 内部ではソートされてる、平衡２分木、計算量は挿入取得ともにlogn
 - map<string,int> a;で宣言
 - もしくは map<string,int> a {{"abc", 1}, {"def", 2}}; とも
 - 追加するときは a["first"] = 1;
 - 同様に value:1 は a["first"] でとってくる
+- countが0,1しか返さないからfind的な使い方ができる
 
 ## set
 - 集合のデータ構造 -> 要素を追加しても重複があるものは入らない
 - set<string> st; の感じで初期化
-- 要素の追加は st.insert("ss") 
+- 要素の追加は st.insert("ss") もしくはemplace("ssa")
+- mapのキーがないバージョンで計算量とｋはmapと同じ
+- countが0,1しか返さないからfind的な使い方ができる
+
+## deque
+- deque<int> dq{1,4,3,6,2,8,2,5} もしくはdeque<int> dq で初期化
+- dq.front(), dq.back()で先頭と最後尾取得
+- 要素の追加 : dq.push_back(), dq.push_front()
+- 要素の削除 : dq.pop_back(), dq.pop_front()
 
 
 # union find
