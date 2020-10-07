@@ -16,6 +16,11 @@ const int A = 1e6 + 5;
 
 ll gcd(ll a, ll b) { return b ? gcd(b, a % b) : a; }
 
+// N 個の整数があります。 i 番目の数は A i です。 
+//「全ての 1 ≤ i < j ≤ N について、 G C D ( A i , A j ) = 1 」が成り立つとき、 { A i } は pairwise coprime であるといいます。 
+// { A i } が pairwise coprime ではなく、かつ、 G C D ( A 1 , … , A N ) = 1 であるとき、 { A i } は setwise coprime であるといいます。 
+// { A i } が pairwise coprime、setwise coprime、そのどちらでもない、のいずれであるか判定してください。 ただし G C D ( … ) は最大公約数を表します.
+
 int main(){
     int n;
     cin >> n;

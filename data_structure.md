@@ -40,11 +40,18 @@
 - mapのキーがないバージョンで計算量とｋはmapと同じ
 - countが0,1しか返さないからfind的な使い方ができる
 
+## queue
+- dq.front() で先頭取得
+- 要素の追加 : dq.push(), dq.push()
+- 要素の削除 : dq.pop(), dq.pop()
+- size()でサイズ
+
 ## deque
 - deque<int> dq{1,4,3,6,2,8,2,5} もしくはdeque<int> dq で初期化
 - dq.front(), dq.back()で先頭と最後尾取得
 - 要素の追加 : dq.push_back(), dq.push_front()
 - 要素の削除 : dq.pop_back(), dq.pop_front()
+- size()でサイズ
 
 
 # union find
