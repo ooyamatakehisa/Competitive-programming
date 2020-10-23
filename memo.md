@@ -16,6 +16,14 @@ llは10^19くらいまで
 切り捨ては割るだけでよい、A/Bの切り上げは(A+B-1)/Bの商に等しい
 数字aの桁数はto_string(a).length()で取得できる。
 
+## double, floatなど (ABC169C)
+構成	 符号部	　指数部   仮数部
+float	1bit	8bit	23bit
+double	1bit	11bit	52bit
+doubleでは2^53 以下の整数は正確に表現できます。253 はおよそ 9.01×10^15 なので少数以下も含めて10進法で15桁くらいまでしか表現できない
+そもそもdoubleは二進数でパソコン内では表現してるから0.1とかは二進数で無限に続いて、どうしても誤差が発生する
+-> できるだけ整数に変換して扱おう！
+
 ### string関連
 - stringの長さ取得関数length()の返り値はsize_t型で0以上の値しか取らないため-string.length()とかは変な値を取る。これを避けるためにこのメソッドを使うときは(int)(strint.length())のように使う。
 - string型の文字列Sのn番目の文字を取り出したいときS[n-1]と書くが、この値はchar型となる、一般的にchar型など一文字のときはその文字をシングルクォーテーション(')で囲み複数の文字列の場合はダブルクォーテーション(")で囲む。改行コードは''で囲む。
@@ -43,6 +51,23 @@ ll lcm(ll x, ll y) { return a / gcd(a, b) * b; }
 # a以下のbの最大の倍数
 a / b * b
 
+# 素因数分解
+O(√n) 普通にprime_factor(n)とかでnの(素数, その素数の数)のpairのvectorが得られる
+ABC169D
+template <typename T>
+vector<pair<T, T>> prime_factor(T n) {
+    vector<pair<T, T>> ret;
+    for (T i = 2; i * i <= n; i++) {
+        T cnt = 0;
+        while (n % i == 0) {
+            cnt++;
+            n /= i;
+        }
+        ret.push_back(make_pair(i, cnt));
+    }
+    if (n != 1) ret.push_back(make_pair(n, 1));
+    return ret;
+}
 
 # XOR
 - 交換法則: a^b = b^a

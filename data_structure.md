@@ -10,6 +10,7 @@
 - ソートしたあと前後で重複があるものは unique(a.begin(), a.end()) で重複が取り除かれる
 - a.back()でベクトルaの最後の要素がとってこれる
 - int型なら10^6くらいまでの長さの配列は作れる
+- 要素がpairの時はemplace_back(first, second)でそのままpush_back的なことができる
 
 ### touple
 - a,b,cの要素の組を作りたいときはtie(a, b, c)で作成可能。
