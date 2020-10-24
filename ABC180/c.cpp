@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <queue>
 #include <map>
+#include <set>
 #include <list>
 //#include <bits/stdc++.h>
 
@@ -13,5 +14,14 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    ll n;
+    cin >> n;
+    set<ll> s;
+    for (ll i = 1; i * i <= n; i++) {
+        if (n % i) continue;
+        s.insert(i);
+        s.insert(n / i);
+    }
+    for (ll a : s) cout << a << endl;
     return 0;
 }

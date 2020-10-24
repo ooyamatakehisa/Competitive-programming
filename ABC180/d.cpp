@@ -13,5 +13,19 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    ll x, y;
+    ll a, b;
+    ll cnt = 0;
+    cin >> x >> y >> a >> b;
+    ll tmp = x;
+    while (1) {
+        if (y / a < tmp) break;
+        if (a * tmp >= y) break;
+        if (a * tmp >= tmp + b) break;
+        tmp *= a;
+        cnt++;
+    }
+    cnt += (y - tmp - 1) / b;
+    cout << cnt << endl;
     return 0;
 }
