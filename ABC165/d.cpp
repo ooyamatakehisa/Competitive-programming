@@ -13,5 +13,12 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    int a;
+    ll b, n;
+    cin >> a >> b >> n;
+    ll x = n;
+    if (n >= b - 1) x = b - 1;
+    ll ans = a * (x % b) / b;
+    cout << ans << endl;
     return 0;
 }
