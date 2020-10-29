@@ -13,11 +13,10 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n, s;
-    cin >> n >> s;
-    
-    
-
+    double l;
+    cin >> l;
+    double line = l / 3;
+    double ans = line * line * line;
+    printf("%.10f\n", ans);
     return 0;
-
 }
