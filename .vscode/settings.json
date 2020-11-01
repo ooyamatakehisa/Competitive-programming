@@ -13,6 +13,9 @@
         "set": "cpp",
         "random": "cpp",
         "map": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "queue": "cpp",
+        "__split_buffer": "cpp",
+        "list": "cpp"
     }
 }

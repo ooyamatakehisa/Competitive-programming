@@ -38,6 +38,11 @@ doubleでは2^53 以下の整数は正確に表現できます。253 はおよ�
 
 # 入出力
 - puts("aaaa") ""の中のstringを出力してそのあと改行してくれるやつ
+- 入力行数が不明な時は以下の感じで実装できる、wordsがある行の単語リスト
+    string line;
+    while (!cin.eof()) {
+        getline(cin, line);
+        vector<string> words = split(line, ' ');
 
 
 # gcd
@@ -150,3 +155,16 @@ template<int MOD> struct Fp {
 };
 const int MOD = 1e9 + 7;
 using mint = Fp<MOD>;
+
+# split string
+vector<string> split(const string &s, char delim) {
+    vector<string> elems;
+    stringstream ss(s);
+    string item;
+    while (getline(ss, item, delim)) {
+    if (!item.empty()) {
+            elems.push_back(item);
+        }
+    }
+    return elems;
+}

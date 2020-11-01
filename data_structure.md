@@ -11,6 +11,7 @@
 - a.back()でベクトルaの最後の要素がとってこれる
 - int型なら10^6くらいまでの長さの配列は作れる
 - 要素がpairの時はemplace_back(first, second)でそのままpush_back的なことができる
+- clear()で前要素削除できる
 
 ### touple
 - a,b,cの要素の組を作りたいときはtie(a, b, c)で作成可能。
@@ -33,6 +34,7 @@
 - 追加するときは a["first"] = 1;
 - 同様に value:1 は a["first"] でとってくる
 - countが0,1しか返さないからfind的な使い方ができる
+- 特定の要素の削除はerace["first"]とかでできる
 
 ## set
 - 二分探索木での実装
