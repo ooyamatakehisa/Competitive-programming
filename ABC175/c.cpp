@@ -16,7 +16,16 @@ int main(){
     ll x, k, d;
     cin >> x >> k >> d;
     ll q = x >= 0 ? x / d : -x / d;
-    if ((k - q) % 2) cout << q - d << endl;
-    else cout << q << endl;
+    if (q > k) {
+        ll ans = x >= 0 ? x - d * k : -x + k * d;
+        cout << ans << endl;
+        return 0;
+    }
+    ll r = x >= 0 ? x % d : -(-x % d);
+    if ((k - q) % 2) {
+        if (r >= 0) cout << abs(r - d) << endl;
+        else cout << abs(r + d) << endl;
+    }
+    else cout << abs(r) << endl;
     return 0;
 }
