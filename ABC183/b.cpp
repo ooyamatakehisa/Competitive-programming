@@ -3,10 +3,8 @@
 #include <algorithm>
 #include <queue>
 #include <map>
-#include <set>
 #include <list>
 #include <climits>
-
 //#include <bits/stdc++.h>
 
 
@@ -17,5 +15,9 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    double sx, sy, gx, gy;
+    cin >> sx >> sy >> gx >> gy;
+    double x = (gy * sx + sy * gx) / (gy + sy);
+    printf("%.10f\n", x);
     return 0;
 }

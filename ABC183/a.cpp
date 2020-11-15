@@ -3,10 +3,8 @@
 #include <algorithm>
 #include <queue>
 #include <map>
-#include <set>
 #include <list>
 #include <climits>
-
 //#include <bits/stdc++.h>
 
 
@@ -17,5 +15,9 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    int x;
+    cin >> x;
+    if (x < 0) cout << 0 << endl;
+    else cout << x << endl;
     return 0;
 }
