@@ -3,19 +3,18 @@
 #include <algorithm>
 #include <queue>
 #include <map>
-#include <set>
 #include <list>
-#include <climits>
-
 //#include <bits/stdc++.h>
 
 
 using namespace std;
 
 #define FOR(i,a,b) for(int i=(a),i##formax=(b);i<i##formax;i++)
-#define rep(i, n) for (int i = 0; i < (n)); ++i)
 typedef long long ll;
 
 int main(){
+    int a, b;
+    cin >> a >> b;
+    cout << 2 * a + 100 - b << endl;
     return 0;
 }
