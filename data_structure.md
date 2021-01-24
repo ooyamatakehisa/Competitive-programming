@@ -8,6 +8,7 @@
 - vectorのコピーは要素ごとにおこなわずvector<int> b = aのようにする。 
 - 最大値: max = *max_element( a.begin(), a.end() ); もしくは for(auto e:v) mx = max(mx, e)
 - ソートしたあと前後で重複があるものは unique(a.begin(), a.end()) で重複が取り除かれる
+- reverse(a.begin(), a.end())
 - a.back()でベクトルaの最後の要素がとってこれる
 - int型なら10^6くらいまでの長さの配列は作れる1e9は無理だった
 - 要素がpairの時はemplace_back(first, second)でそのままpush_back的なことができる
