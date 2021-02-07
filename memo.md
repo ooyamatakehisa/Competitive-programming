@@ -49,7 +49,7 @@ doubleでは2^53 以下の整数は正確に表現できます。253 はおよ�
 ll gcd(ll a, ll b) { return b ? gcd(b, a % b) : a; }
 計算量はlog(n)
 gcdの和を求める問題とかはgcd = iとなるものの数diを出せば
-Σi*diで求められる 
+Σi*diで求められる
 
 # lcm : 最小公倍数
 ll lcm(ll x, ll y) { return a / gcd(a, b) * b; }
@@ -89,7 +89,7 @@ vector<pair<T, T>> prime_factor(T n) {
 - (4n)^(4n+1)^(4n+2)^(4n+3)=0 ⇔ (4n)^(4n+1)^(4n+2)=(4n+3) ⇔ (4n)^(4n+1)=(4n+3)^(4n+2) ...
 - コード上での演算子が ^
 
-    
+
 
 # mint 勝手にMODとってくれる
 template<int MOD> struct Fp {
@@ -168,3 +168,7 @@ vector<string> split(const string &s, char delim) {
     }
     return elems;
 }
+
+
+# ダイクストラ
+abc191 e

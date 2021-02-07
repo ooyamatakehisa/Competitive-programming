@@ -5,7 +5,7 @@
 - a[i]=aでも追加可能（初期化した値を書き換えている。）
 - 昇順ソートはsort(a.begin(),a.end())で可能、降順は(a.rbigin(),a.rend())で可能
 - 要素数はa.size()で可能
-- vectorのコピーは要素ごとにおこなわずvector<int> b = aのようにする。 
+- vectorのコピーは要素ごとにおこなわずvector<int> b = aのようにする。
 - 最大値: max = *max_element( a.begin(), a.end() ); もしくは for(auto e:v) mx = max(mx, e)
 - ソートしたあと前後で重複があるものは unique(a.begin(), a.end()) で重複が取り除かれる
 - reverse(a.begin(), a.end())
@@ -17,7 +17,7 @@
 ### touple
 - a,b,cの要素の組を作りたいときはtie(a, b, c)で作成可能。
 
-### stack 
+### stack
 - スタック, LIFOのデータ構造
 - stack<int> a; で宣言
 - push(), pop(), top(), size(), empty()
@@ -51,6 +51,11 @@
 - 要素の追加 : dq.push(), dq.push()
 - 要素の削除 : dq.pop(), dq.pop()
 - size()でサイズ
+
+## priority_queue
+- 一番小さい(大きい)値へのアクセスはq.top()
+- 後の操作はだたいqueueとかと同じ
+- デフォルトで降順なので，照準にするためにはpriority_queue<T, vecotr<T>, greater<T>> と宣言する，vecotr<T>, greater<T>はおまじない
 
 ## deque
 - deque<int> dq{1,4,3,6,2,8,2,5} もしくはdeque<int> dq で初期化
