@@ -42,6 +42,7 @@ doubleでは2^53 以下の整数は正確に表現できます。253 はおよ�
     while (!cin.eof()) {
         getline(cin, line);
         vector<string> words = split(line, ' ');
+- pythonの標準入力の仕方input()からキャスト！(abc186c)
 
 
 # gcd
